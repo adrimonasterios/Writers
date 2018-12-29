@@ -1,5 +1,7 @@
 <h1> Books! </h1>
 
+<%= link_to "Go to Authors", "/writers"%>
+
 <% @books.each do |book| %>
 <p><%= "#{book.name}" %></p>
 <% end %>

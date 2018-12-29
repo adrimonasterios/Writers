@@ -1,5 +1,6 @@
 <h1>Authors</h1>
 
 <% @writers.each do |writer| %>
-<p><%= "#{writer.id}) #{writer.name} #{writer.last_name}" %>
+<p><%= link_to "#{writer.id}) #{writer.name} #{writer.last_name} (#{Book.where(writer_id: writer.id).count} books)", "/writers/#{writer.id}" %></p>
+
 <% end %>

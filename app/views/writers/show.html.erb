@@ -1,0 +1,16 @@
+<h1><%= Writer.where(id: @writer_id).first.name %></h1>
+
+<p>name: <%= @current_writer.name %></p>
+<p>last name: <%= @current_writer.last_name %></p>
+
+
+<% @books.each do |book| %>
+  <p>id: <%= book.id %></p>
+  <p>title: <%= book.name %></p>
+  <p>genre: <%= book.genre %></p>
+  <p>description: <%= book.description %></p>
+  <p>author id: <%= book.writer_id %></p>
+  <p>author: <%= Writer.where(id: @writer_id).first.name %></p>
+<% end %>
+
+<%= link_to "Back to Authors", "/writers" %>
