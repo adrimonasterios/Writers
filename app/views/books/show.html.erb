@@ -1,0 +1,11 @@
+
+<h1><%= @current_book.name %></h1>
+
+<p>author: <%= "#{@book_author.name} #{@book_author.last_name}"%></p>
+<p>genre: <%= @current_book.genre %></p>
+<p>description: <%= @current_book.description %></p>
+
+
+<p><%= link_to "Go to #{@book_author.name} #{@book_author.last_name}'s Profile", "/writers/#{@current_book.writer_id}" %></p>
+</hr>
+<p><%= link_to "See more books", "/books" %></p>
