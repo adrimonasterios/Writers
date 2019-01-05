@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+.alphabet{
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  justify-content: space-around;
+  align-self: center;
+}
+
+.letter{
+  cursor: pointer;
+}
