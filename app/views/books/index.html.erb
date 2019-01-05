@@ -2,6 +2,13 @@
 
 <%= link_to "Go to Authors", "/writers"%>
 
-<% @books.each do |book| %>
-  <p><%=link_to "#{book.name} (by #{Writer.where(id: book.writer_id).first.name} #{Writer.where(id: book.writer_id).first.last_name})", "/books/#{book.id}" %></p>
-<% end %>
+
+
+
+<%= react_component "Books",
+    props: {
+      books: @books,
+      writers: Writer.all,
+      alphabet: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N",
+        "O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+    } %>
