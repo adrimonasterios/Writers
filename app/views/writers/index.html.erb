@@ -1,6 +1,14 @@
-<h1>Authors</h1>
+<div class="authors">
+  <h1>Authors</h1>
 
-<% @writers.each do |writer| %>
-<p><%= link_to "#{writer.id}) #{writer.name} #{writer.last_name} (#{Book.where(writer_id: writer.id).count} books)", "/writers/#{writer.id}" %></p>
+  <%= react_component "Writers",
+  props: {
+    writers: @writers,
+    books: Book.all,
+    alphabet: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N",
+      "O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+      }, id: "root"%>
 
-<% end %>
+
+      <%= link_to "Go to Library", "/books"%>
+</div>

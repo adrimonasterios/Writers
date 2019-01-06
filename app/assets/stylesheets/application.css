@@ -192,3 +192,30 @@ p{
   overflow: visible;
   font
 }
+
+.authors{
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.writers_component{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.writer_list{
+  width: 80%;
+  height: 90%;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+}
