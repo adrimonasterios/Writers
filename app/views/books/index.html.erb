@@ -1,12 +1,14 @@
-<h1>Library</h1>
+<div class="books">
+  <h1>Library</h1>
 
-<%= react_component "Books",
-    props: {
-      books: @books,
-      writers: Writer.all,
-      alphabet: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N",
-        "O","P","Q","R","S","T","U","V","W","X","Y","Z"]
-    } %>
+  <%= react_component "Books",
+  props: {
+    books: @books,
+    writers: Writer.all,
+    alphabet: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N",
+      "O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+      }, id: "root"%>
 
 
-<%= link_to "Go to Authors", "/writers"%>
+      <%= link_to "Go to Authors", "/writers"%>
+</div>

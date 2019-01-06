@@ -1,5 +1,4 @@
 import ReactOnRails from 'react-on-rails';
-
 import Writers from '../bundles/Writers/components/Writers';
 import Books from '../bundles/Books/components/Books';
 

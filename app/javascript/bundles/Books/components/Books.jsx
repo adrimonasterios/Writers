@@ -7,13 +7,13 @@ class Books extends React.Component{
 
   render(){
     return(
-      <div>
+      <div className="books_component">
         <div className="alphabet">
           {this.props.alphabet.map((element)=>{
             return <p className="letter" onClick={(ev)=>{this.setState({letter: element})}}>{element}</p>
           })}
         </div>
-        <div>
+        <div className="book_list">
           {this.props.books.map((element, index)=>{
             let {writers} = this.props
             let authorId = element.writer_id
@@ -25,8 +25,18 @@ class Books extends React.Component{
               }
             }
             if(this.state.letter == element.name[0]){
-              return <p>{element.name} (by {author})</p>
-            }
+              return (
+                <div className="book_author">
+                  <a href={`books/${element.id}`}>
+                    <div className="one_book">
+                      <p>{element.name}</p>
+                    </div>
+                  </a>
+                  <a href={`writers/${authorId}`}>
+                    <p>by: {author}</p>
+                  </a>
+                </div>
+            )}
           })}
         </div>
       </div>
