@@ -1,4 +1,5 @@
 <div class="books">
+  <%= link_to "Go to Authors", "/writers", class: "to_authors"%>
   <h1>Library</h1>
 
   <%= react_component "Books",
@@ -8,7 +9,4 @@
     alphabet: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N",
       "O","P","Q","R","S","T","U","V","W","X","Y","Z"]
       }, id: "root"%>
-
-
-      <%= link_to "Go to Authors", "/writers"%>
 </div>

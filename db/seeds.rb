@@ -11,7 +11,8 @@ require 'faker'
 20.times do
   w = Writer.new(
     name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name
+    last_name: Faker::Name.last_name,
+    biography: Faker::Lorem.paragraph_by_chars([*500..700].sample, false)
   )
   w.save
 end

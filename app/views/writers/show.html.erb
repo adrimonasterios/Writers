@@ -1,8 +1,6 @@
-<h1><%= "#{Writer.where(id: @writer_id).first.name} #{Writer.where(id: @writer_id).first.last_name}" %></h1>
-
-<h2>Books of this author</h2>
-<% @books.each do |book| %>
-  <p>title: <%=link_to "#{book.name}", "/books/#{book.id}" %></p>
-<% end %>
-
-<%= link_to "Back to Authors", "/writers" %>
+<div class="single_writer">
+  <%= react_component "Writer", props:{
+    writer: @current_writer,
+    books: @books
+    }, id: "single-writer" %>
+</div>
