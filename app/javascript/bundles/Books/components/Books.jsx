@@ -27,7 +27,7 @@ class Books extends React.Component{
             if(this.state.letter == element.name[0]){
               return (
                 <div className="book_author">
-                  <a href={`books/${element.id}`}>
+                  <a href={`/books/${element.id}`}>
                     <div className="one_book">
                       <p>{element.name}</p>
                     </div>

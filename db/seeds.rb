@@ -20,7 +20,7 @@ end
   b = Book.new(
     name: Faker::Book.title,
     genre: Faker::Book.genre,
-    description: Faker::Lorem.paragraph,
+    description: Faker::Lorem.paragraph_by_chars([*600..830].sample, false),
     writer_id: [*1..20].sample
   )
   b.save
